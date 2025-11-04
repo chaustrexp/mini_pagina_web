@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talento Tech Oriente</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Pantalla de Introducción -->
+    <div id="intro-screen" class="intro-screen">
+        <div class="intro-content">
+            <div class="intro-logo">
+                <div class="logo-animation">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h1 class="intro-title">Talento Tech Oriente</h1>
+                <p class="intro-subtitle">Impulsando el talento digital en la región Oriente</p>
+            </div>
+            
+            <div class="intro-animation">
+                <div class="typing-text">
+                    <span id="typed-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
+            
+            <div class="intro-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p class="progress-text">Cargando experiencia digital...</p>
+            </div>
+            
+            <div class="intro-skip">
+                <button onclick="skipIntro()" class="skip-btn">
+                    <i class="fas fa-forward"></i>
+                    Saltar introducción
+                </button>
+            </div>
+        </div>
+        
+        <div class="intro-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div id="main-content" class="main-content hidden">
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-code"></i>
+                        <div class="logo-glow"></div>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Talento Tech Oriente</h1>
+                        <p class="subtitle">Impulsando el talento digital en la región Oriente</p>
+                    </div>
+                </div>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-item">
+                        <a href="#sobre-programa" class="nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Sobre el Programa</span>
+                            <div class="nav-link-bg"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#bootcamps" class="nav-link">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Bootcamps</span>
+                            <div class="nav-link-bg"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#detalle-bootcamp" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Detalle</span>
+                            <div class="nav-link-bg"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item cta-item">
+                        <a href="#" class="nav-cta" onclick="mostrarInscripcion()">
+                            <i class="fas fa-rocket"></i>
+                            <span>Inscríbete</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="mobile-menu-toggle" id="mobile-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+            </div>
+            
+            <!-- Indicador de scroll -->
+            <div class="scroll-indicator">
+                <div class="scroll-progress"></div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-overlay">
+            <div class="mobile-menu-content">
+                <div class="mobile-logo">
+                    <i class="fas fa-code"></i>
+                    <span>Talento Tech</span>
+                </div>
+                <ul class="mobile-nav-links">
+                    <li><a href="#sobre-programa" class="mobile-nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Sobre el Programa</span>
+                    </a></li>
+                    <li><a href="#bootcamps" class="mobile-nav-link">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Bootcamps</span>
+                    </a></li>
+                    <li><a href="#detalle-bootcamp" class="mobile-nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Detalle</span>
+                    </a></li>
+                    <li><a href="#" class="mobile-nav-cta" onclick="mostrarInscripcion()">
+                        <i class="fas fa-rocket"></i>
+                        <span>Inscríbete Ahora</span>
+                    </a></li>
+                </ul>
+                <div class="mobile-menu-footer">
+                    <p>📞 +57 320 000 0000</p>
+                    <div class="mobile-social">
+                        <a href="https://talentotech.gov.co" target="_blank">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="https://wa.me/573200000000" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <div class="floating-elements">
+                    <div class="floating-element" style="--delay: 0s; --duration: 6s;">💻</div>
+                    <div class="floating-element" style="--delay: 1s; --duration: 8s;">🚀</div>
+                    <div class="floating-element" style="--delay: 2s; --duration: 7s;">⚡</div>
+                    <div class="floating-element" style="--delay: 3s; --duration: 9s;">🎯</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="highlight">Transforma</span> tu futuro con
+                        <span class="tech-text">Tecnología</span>
+                    </h1>
+                    <p class="hero-description">
+                        Únete a la revolución digital del oriente colombiano. Desarrolla habilidades que las empresas necesitan.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Graduados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Empleabilidad</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Bootcamps</div>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#bootcamps" class="cta-primary">
+                            <i class="fas fa-rocket"></i>
+                            Explorar Bootcamps
+                        </a>
+                        <a href="#sobre-programa" class="cta-secondary">
+                            <i class="fas fa-play"></i>
+                            Conocer más
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre el Programa -->
+        <section id="sobre-programa" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Sobre nosotros</span>
+                    <h2>💡 Sobre el Programa</h2>
+                    <p class="section-subtitle">Formación gratuita de calidad mundial</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Talento Tech Oriente es un programa de formación <strong>gratuita</strong> que impulsa el desarrollo de habilidades digitales en jóvenes y adultos del oriente colombiano. A través de bootcamps intensivos, brinda herramientas prácticas para ingresar al mundo laboral tecnológico.</p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>100% Gratuito</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Certificación oficial</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Mentores expertos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Formación Certificada</h3>
+                            <p>Obtén certificaciones reconocidas por la industria</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Conexión Empresarial</h3>
+                            <p>Acceso directo a oportunidades laborales</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3>Metodología Intensiva</h3>
+                            <p>Aprendizaje práctico y acelerado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Bootcamps Disponibles -->
+        <section id="bootcamps" class="bootcamps-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Programas</span>
+                    <h2>🧑‍💻 Bootcamps Disponibles</h2>
+                    <p class="section-subtitle">Elige tu camino hacia el éxito tecnológico</p>
+                </div>
+                <div class="bootcamps-grid">
+                    <div class="bootcamp-card featured">
+                        <div class="card-badge">Más Popular</div>
+                        <div class="bootcamp-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>Desarrollo Web Frontend</h3>
+                        <p>Crea interfaces web modernas y responsivas con las últimas tecnologías</p>
+                        <div class="card-features">
+                            <span class="feature-tag">HTML5</span>
+                            <span class="feature-tag">CSS3</span>
+                            <span class="feature-tag">JavaScript</span>
+                            <span class="feature-tag">React</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                6 meses
+                            </div>
+                            <div class="level">
+                                <i class="fas fa-signal"></i>
+                                Principiante
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bootcamp-card">
+                        <div class="bootcamp-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Análisis de Datos</h3>
+                        <p>Domina el análisis y visualización de datos para tomar decisiones inteligentes</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Python</span>
+                            <span class="feature-tag">SQL</span>
+                            <span class="feature-tag">Tableau</span>
+                            <span class="feature-tag">Excel</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                5 meses
+                            </div>
+                            <div class="level">
+                                <i class="fas fa-signal"></i>
+                                Intermedio
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bootcamp-card">
+                        <div class="bootcamp-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Ciberseguridad</h3>
+                        <p>Protege sistemas y datos digitales contra amenazas cibernéticas</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Ethical Hacking</span>
+                            <span class="feature-tag">Firewall</span>
+                            <span class="feature-tag">Pentesting</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                7 meses
+                            </div>
+                            <div class="level">
+                                <i class="fas fa-signal"></i>
+                                Avanzado
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bootcamp-card">
+                        <div class="bootcamp-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Inteligencia Artificial</h3>
+                        <p>Desarrolla soluciones inteligentes con IA y Machine Learning</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Python</span>
+                            <span class="feature-tag">TensorFlow</span>
+                            <span class="feature-tag">ML</span>
+                            <span class="feature-tag">Deep Learning</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                8 meses
+                            </div>
+                            <div class="level">
+                                <i class="fas fa-signal"></i>
+                                Avanzado
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalle del Bootcamp -->
+        <section id="detalle-bootcamp" class="bootcamp-detail">
+            <div class="container">
+                <h2>📘 Desarrollo Web Frontend</h2>
+                <div class="detail-content">
+                    <div class="detail-info">
+                        <div class="info-card">
+                            <h3>📋 Información del Programa</h3>
+                            <ul>
+                                <li><strong>Duración:</strong> 6 meses</li>
+                                <li><strong>Horario:</strong> Lunes a viernes, 6:00 p.m. a 9:00 p.m.</li>
+                                <li><strong>Modalidad:</strong> Presencial y Virtual</li>
+                                <li><strong>Certificación:</strong> Incluida</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3>✅ Requisitos</h3>
+                            <ul>
+                                <li>Ser mayor de 16 años</li>
+                                <li>Residir en la región Oriente</li>
+                                <li>Computadora con acceso a internet</li>
+                                <li>Disponibilidad de tiempo completo</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cta-section">
+                            <button class="inscribirse-btn" onclick="mostrarInscripcion()">📝 Inscríbeme</button>
+                            <div class="contact-info">
+                                <p>📞 <strong>Teléfono:</strong> <a href="tel:+573200000000">+57 320 000 0000</a></p>
+                                <p>🔗 <strong>Página oficial:</strong> <a href="https://talentotech.gov.co" target="_blank">Visitar Talento Tech</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chatbot "Asesor TalentoTech" -->
+    <div id="chatbot-container">
+        <div id="chatbot-toggle" onclick="toggleChatbot()">
+            🤖
+        </div>
+        <div id="chatbot" class="chatbot-hidden">
+            <div class="chatbot-header">
+                <h3>🤖 TechBot - Asesor TalentoTech</h3>
+                <button onclick="toggleChatbot()" class="close-btn">×</button>
+            </div>
+            <div id="chatbot-messages" class="chatbot-messages">
+                <div class="bot-message">
+                    👋 ¡Hola! Soy TechBot, tu asistente de Talento Tech Oriente. ¿Sobre qué te gustaría saber hoy?
+                </div>
+            </div>
+            <div class="chatbot-options">
+                <button onclick="sendMessage('¿Qué es Talento Tech?')">¿Qué es Talento Tech?</button>
+                <button onclick="sendMessage('¿Qué bootcamps hay?')">¿Qué bootcamps hay?</button>
+                <button onclick="sendMessage('Info del bootcamp Frontend')">Info Desarrollo Web Frontend</button>
+                <button onclick="sendMessage('Número de inscripciones')">📞 Teléfono inscripciones</button>
+                <button onclick="sendMessage('Link web oficial')">🔗 Página oficial</button>
+                <button onclick="sendMessage('Hablar con humano')">👨‍💼 Hablar con humano</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Inscripción -->
+    <div id="modal-inscripcion" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>🎓 ¡Inscríbete ahora!</h2>
+            <p>Para completar tu inscripción al bootcamp de <strong>Desarrollo Web Frontend</strong>, contáctanos:</p>
+            <div class="contact-options">
+                <a href="tel:+573200000000" class="contact-btn">📞 Llamar: +57 320 000 0000</a>
+                <a href="https://wa.me/573200000000?text=Hola,%20quiero%20inscribirme%20al%20bootcamp%20de%20Desarrollo%20Web%20Frontend%20de%20Talento%20Tech%20Oriente" target="_blank" class="contact-btn whatsapp">💬 WhatsApp</a>
+                <a href="https://talentotech.gov.co" target="_blank" class="contact-btn official">🔗 Página Oficial</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <!-- Chatbase Integration -->
+    <script>
+        (function(){
+            if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+                window.chatbase=(...arguments)=>{
+                    if(!window.chatbase.q){
+                        window.chatbase.q=[]
+                    }
+                    window.chatbase.q.push(arguments)
+                };
+                window.chatbase=new Proxy(window.chatbase,{
+                    get(target,prop){
+                        if(prop==="q"){
+                            return target.q
+                        }
+                        return(...args)=>target(prop,...args)
+                    }
+                })
+            }
+            const onLoad=function(){
+                const script=document.createElement("script");
+                script.src="https://www.chatbase.co/embed.min.js";
+                script.id="zCujemLVqFR0PwWbTuPPU";
+                script.domain="www.chatbase.co";
+                document.body.appendChild(script)
+            };
+            if(document.readyState==="complete"){
+                onLoad()
+            }else{
+                window.addEventListener("load",onLoad)
+            }
+        })();
+    </script>
+    
+    </div> <!-- Cierre de main-content -->
+</body>
+</html>
